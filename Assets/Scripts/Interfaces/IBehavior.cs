@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//[System.Serializable] //not valid on this declaration type?
 public interface IBehavior
 {
     public abstract bool Execute(CharacterSheet user, CharacterSheet target);
-    OnPhase phase { get; set; }
+    public abstract OnPhase getPhase();
+    //public IPhase phase { get; set; }
+    //public int baseAmount { get; set; }
 }
 
